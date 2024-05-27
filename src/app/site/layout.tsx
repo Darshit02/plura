@@ -5,14 +5,10 @@ import React from 'react'
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
-    // <ClerkProvider appearance={{ baseTheme: dark }}>
-    <>
-        <Navigation />
-     
-        {children}
-    </>
-    
-    // </ClerkProvider>
+    <ClerkProvider appearance={{ baseTheme: dark }}>
+      <Navigation />
+      {children}
+    </ClerkProvider>
   )
 }
 
