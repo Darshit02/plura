@@ -29,7 +29,7 @@ const Navigation = ({ user }: Props) => {
         >
           Login
         </Link>
-        {/* <UserButton /> */}
+        <UserButton />
         <ModeToggle />
       </aside>
     </div>
