@@ -5,7 +5,7 @@ import React from 'react'
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <ClerkProvider appearance={{ baseTheme: dark }}>
-        <div className='h-screen flex items-center justify-center'>
+        <div className=''>
             {children}
         </div>
         </ClerkProvider>
