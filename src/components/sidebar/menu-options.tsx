@@ -1,3 +1,4 @@
+
 'use client'
 
 import {
@@ -23,9 +24,12 @@ import {
   CommandList,
 } from '../ui/command'
 import Link from 'next/link'
-
+import { twMerge } from 'tailwind-merge'
+import CustomModal from '../global/custom-modal'
+import SubAccountDetails from '../forms/subaccount-details'
 import { Separator } from '../ui/separator'
 import { icons } from '@/lib/constants'
+import { useModal } from '@/providers/model-provider'
 
 type Props = {
   defaultOpen?: boolean
@@ -46,7 +50,7 @@ const MenuOptions = ({
   user,
   defaultOpen,
 }: Props) => {
-//   const { setOpen } = useModal()
+  const { setOpen } = useModal()
   const [isMounted, setIsMounted] = useState(false)
 
   const openState = useMemo(
@@ -120,7 +124,7 @@ const MenuOptions = ({
                 </div>
               </Button>
             </PopoverTrigger>
-            <PopoverContent className="w-80 h-96 mt-4 z-[200]">
+            <PopoverContent className="w-80 h-full mt-4 z-[200]">
               <Command className="rounded-lg">
                 <CommandInput placeholder="Search Accounts..." />
                 <CommandList className="pb-16">
@@ -233,6 +237,20 @@ const MenuOptions = ({
                   <SheetClose>
                     <Button
                       className="w-full flex gap-2"
+                      onClick={() => {
+                        setOpen(
+                          <CustomModal
+                            title="Create A Subaccount"
+                            subheading="You can switch between your agency account and the subaccount from the sidebar"
+                          >
+                            <SubAccountDetails
+                              agencyDetails={user?.Agency as Agency}
+                              userId={user?.id as string}
+                              userName={user?.name}
+                            />
+                          </CustomModal>
+                        )
+                      }}
                     >
                       <PlusCircleIcon size={15} />
                       Create Sub Account
@@ -261,11 +279,11 @@ const MenuOptions = ({
                     return (
                       <CommandItem
                         key={sidebarOptions.id}
-                        className="md:w-full w-full"
+                        className="md:w-[320px] w-full"
                       >
                         <Link
                           href={sidebarOptions.link}
-                          className="flex items-center gap-2 hover:bg-transparent rounded-md transition-all md:w-full w-full"
+                          className="flex items-center gap-2 hover:bg-transparent rounded-md transition-all md:w-full w-[320px]"
                         >
                           {val}
                           <span>{sidebarOptions.name}</span>
