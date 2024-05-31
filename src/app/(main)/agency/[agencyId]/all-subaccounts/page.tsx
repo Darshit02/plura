@@ -39,9 +39,9 @@ const AllSubAccountsPage = async ({ params }: Props) => {
     <AlertDialog>
       <div className="flex flex-col">
         <CreateSubaccountButton
-            user={user}
-            id={params.agencyId}
-            className="w-[200px] self-end m-6"
+          user={user}
+          id={params.agencyId}
+          className="w-[200px] self-end m-6"
         />
         <Command className="rounded-lg bg-transparent">
           <CommandInput placeholder="Search Account..." />
