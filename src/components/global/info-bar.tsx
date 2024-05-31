@@ -1,3 +1,4 @@
+
 'use client'
 import { NotificationWithUser } from '@/lib/types'
 import { UserButton } from '@clerk/nextjs'
@@ -74,7 +75,7 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
               {allNotifications?.map((notification) => (
                 <div
                   key={notification.id}
-                  className="flex flex-col gap-y-2 mb-2 overflow-x-scroll text-ellipsis"
+                  className="flex flex-col gap-y-2 mb-2 overflow-x text-ellipsis"
                 >
                   <div className="flex gap-2">
                     <Avatar>
@@ -86,28 +87,27 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
                         {notification.User.name.slice(0, 2).toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
-                    <div className="flex flex-col">
-                      <p>
+                    <div className="flex ">
+                      <p className='flex flex-col'>
                         <span className="font-bold">
                           {notification.notification.split('|')[0]}
                         </span>
                         <span className="text-muted-foreground">
                           {notification.notification.split('|')[1]}
-                        </span>
-                        <span className="font-bold">
                           {notification.notification.split('|')[2]}
                         </span>
-                      </p>
-                      <small className="text-xs text-muted-foreground">
+                      <small className="text-xs text-white text-right font-semibold">
                         {new Date(notification.createdAt).toLocaleDateString()}
                       </small>
+                      </p>
                     </div>
                   </div>
                 </div>
               ))}
               {allNotifications?.length === 0 && (
                 <div
-                  className="flex items-center h-[70vh] justify-center text-muted-foreground"
+                  className="flex items-center justify-center text-muted-foreground"
+                  mb-4
                 >
                   You have no notifications
                 </div>
