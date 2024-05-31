@@ -60,7 +60,7 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
                 <Bell size={17} />
               </div>
             </SheetTrigger>
-            <SheetContent className="mt-4 mr-4 pr-4 overflow-scroll">
+            <SheetContent className="mt-4 mr-4 pr-4 text-justify">
               <SheetHeader className="text-left">
                 <SheetTitle>Notifications</SheetTitle>
                 <SheetDescription>
@@ -75,31 +75,34 @@ const InfoBar = ({ notifications, subAccountId, className, role }: Props) => {
               {allNotifications?.map((notification) => (
                 <div
                   key={notification.id}
-                  className="flex flex-col gap-y-2 mb-2 overflow-x text-ellipsis"
+                  className="flex flex-col gap-y-2 mb-2 text-ellipsis mt-5"
                 >
                   <div className="flex gap-2">
                     <Avatar>
                       <AvatarImage
                         src={notification.User.avatarUrl}
                         alt="Profile Picture"
+                        className='object-cover'
                       />
                       <AvatarFallback className="bg-primary">
                         {notification.User.name.slice(0, 2).toUpperCase()}
                       </AvatarFallback>
                     </Avatar>
-                    <div className="flex ">
-                      <p className='flex flex-col'>
+                    <div className="flex flex-col gap-4">
+                      <p>
                         <span className="font-bold">
                           {notification.notification.split('|')[0]}
                         </span>
                         <span className="text-muted-foreground">
                           {notification.notification.split('|')[1]}
+                        </span>
+                        <span className="font-bold">
                           {notification.notification.split('|')[2]}
                         </span>
-                      <small className="text-xs text-white text-right font-semibold">
+                      </p>
+                      <small className="text-xs text-muted-foreground">
                         {new Date(notification.createdAt).toLocaleDateString()}
                       </small>
-                      </p>
                     </div>
                   </div>
                 </div>
