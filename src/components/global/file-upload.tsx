@@ -8,9 +8,10 @@ type Props = {
     apiEndpoint: 'agencyLogo' | 'avatar' | 'subaccountLogo'
     onChange: (url?: string) => void
     value?: string
+    setText? : string | 'Remove Logo'
 }
 
-const FileUpload = ({ apiEndpoint, onChange, value }: Props) => {
+const FileUpload = ({ apiEndpoint, onChange, value ,setText }: Props) => {
     const type = value?.split('.').pop()
     if (value) {
         return (
@@ -43,7 +44,7 @@ const FileUpload = ({ apiEndpoint, onChange, value }: Props) => {
                     type="button"
                 >
                     <X className="h-4 w-4" />
-                    Remove Logo
+                    {setText ? setText : 'Remove Logo'}
                 </Button>
             </div>
         )
