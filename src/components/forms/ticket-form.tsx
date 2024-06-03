@@ -44,6 +44,7 @@ import {
   CommandGroup,
   CommandInput,
   CommandItem,
+  CommandList,
 } from '../ui/command'
 import { cn } from '@/lib/utils'
 import Loading from '../global/loading'
@@ -304,6 +305,7 @@ const TicketForm = ({ getNewTicket, laneId, subaccountId }: Props) => {
                   <CommandGroup>
                     {contactList.map((c) => (
                       <CommandItem
+                      className='w-full '
                         key={c.id}
                         value={c.id}
                         onSelect={(currentValue) => {
@@ -312,13 +314,15 @@ const TicketForm = ({ getNewTicket, laneId, subaccountId }: Props) => {
                           )
                         }}
                       >
+                        <CommandList className=' flex items-center gap-1'>
                         {c.name}
                         <CheckIcon
                           className={cn(
-                            'ml-auto h-4 w-4',
+                            'h-4 w-4',
                             contact === c.id ? 'opacity-100' : 'opacity-0'
                           )}
-                        />
+                          />
+                          </CommandList>
                       </CommandItem>
                     ))}
                   </CommandGroup>
