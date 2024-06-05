@@ -2,6 +2,7 @@ import { Contact, Lane, Notification, Prisma, Role, Tag, Ticket, User } from "@p
 import { _getTicketsWithAllRelations, getAuthUserDetails, getMedia, getPipelineDetails, getTicketsWithTags, getUserPermissions } from "./query";
 import { db } from "./db";
 import { z } from "zod";
+import Stripe from "stripe";
 
 export type NotificationWithUser =
   | ({
@@ -90,3 +91,25 @@ export const ContactUserFormSchema = z.object({
   name: z.string().min(1, 'Required'),
   email: z.string().email(),
 })
+
+export type ShippingInfo = {
+  address: Address
+  name: string
+}
+
+export type StripeCustomerType = {
+  email: string
+  name: string
+  shipping: ShippingInfo
+  address: Address
+}
+
+export type Address = {
+  city: string
+  country: string
+  line1: string
+  postal_code: string
+  state: string
+}
+
+export type PricesList = Stripe.ApiList<Stripe.Price>
