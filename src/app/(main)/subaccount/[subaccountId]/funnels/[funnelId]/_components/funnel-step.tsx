@@ -5,9 +5,7 @@ import { AlertDialog } from '@/components/ui/alert-dialog'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
 import { toast } from '@/components/ui/use-toast'
-import { upsertFunnelPage } from '@/lib/query'
 import { FunnelsForSubAccount } from '@/lib/types'
-import { useModal } from '@/providers/model-provider'
 import { FunnelPage } from '@prisma/client'
 import { Check, ExternalLink, LucideEdit } from 'lucide-react'
 import React, { useState } from 'react'
@@ -28,6 +26,8 @@ import {
   CardTitle,
 } from '@/components/ui/card'
 import FunnelStepCard from './funnel-step-card'
+import { useModal } from '@/providers/model-provider'
+import { upsertFunnelPage } from '@/lib/query'
 
 type Props = {
   funnel: FunnelsForSubAccount
