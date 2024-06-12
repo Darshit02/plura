@@ -3,7 +3,7 @@ import EditorProvider from "@/providers/editor-provider";
 import { redirect } from "next/navigation";
 import React from "react";
 import FunnelEditorNavigation from "./_components/funnel-editor-navigator";
-import FunnelEditorSidebar from "./_components/funnel-editor-sidebar/tabs";
+import FunnelEditorSidebar from "./_components/funnel-editor-sidebar";
 
 type Props = {
   params: {
