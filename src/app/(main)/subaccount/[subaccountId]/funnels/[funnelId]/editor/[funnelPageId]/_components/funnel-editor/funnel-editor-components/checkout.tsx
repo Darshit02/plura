@@ -50,6 +50,8 @@ const Checkout = (props: Props) => {
     }
   }, [funnelId])
 
+  console.log(livePrices)
+
   useEffect(() => {
     if (livePrices.length && subaccountId && subAccountConnectAccId) {
       const getClientSercet = async () => {
@@ -129,6 +131,8 @@ const Checkout = (props: Props) => {
     })
   }
 
+  console.log(options?.clientSecret, subAccountConnectAccId)
+
   return (
     <div
       style={styles}
@@ -152,6 +156,7 @@ const Checkout = (props: Props) => {
             {state.editor.selectedElement.name}
           </Badge>
         )}
+
 
       <div className="border-none transition-all w-full">
         <div className="flex flex-col gap-4 w-full">

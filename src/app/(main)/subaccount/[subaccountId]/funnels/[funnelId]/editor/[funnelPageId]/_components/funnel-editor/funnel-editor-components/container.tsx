@@ -65,7 +65,7 @@ const Container = ({ element }: Props) => {
             containerId: id,
             elementDetails: {
               content: {
-                src: 'https://www.youtube.com/embed/A3l6YYkXzzg?si=zbcCeWcpq7Cwf8W1',
+                src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTGZSofUTq4NSnMPwygpLZes3Nm6PEwRc6BjtMUdZmd10sALBXZEiAKS8yGQQXmrBEBtE&usqp=CAU',
               },
               id: v4(),
               name: 'Video',
@@ -113,7 +113,7 @@ const Container = ({ element }: Props) => {
             elementDetails: {
               content: [],
               id: v4(),
-              name: 'Contact Form',
+              name: 'Payment Form',
               styles: {},
               type: 'paymentForm',
             },

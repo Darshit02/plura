@@ -2,8 +2,6 @@ import React from 'react'
 
 import { Funnel, SubAccount } from '@prisma/client'
 import { db } from '@/lib/db'
-
-
 import FunnelForm from '@/components/forms/funnel-form'
 import {
   Card,
