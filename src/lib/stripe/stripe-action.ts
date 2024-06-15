@@ -57,3 +57,4 @@ export const getConnectAccountProducts = async (stripeAccount: string) => {
   )
   return products.data
 }
+
