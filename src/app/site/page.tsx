@@ -1,3 +1,4 @@
+import { AnimatedBeamDemo } from "@/components/global/connection-teach";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { pricingCards } from "@/lib/constants";
 import clsx from "clsx";
@@ -33,13 +34,25 @@ export default function Home() {
         </div>
       </section>
       <section className="flex justify-center items-center flex-col gap-4 ">
+        <h2 className="text-4xl text-center"> let's Create Your Agency and continue to started</h2>
+        <p className="text-muted-foreground text-center">
+          First Create Your Agency and then get your Access
+          {" you're"} not <br />
+          ready to What you get in there.
+        </p>
+      </section>
+      <div className="flex items-center justify-center gap-4 flex-wrap mb-6 w-full">
+<AnimatedBeamDemo/>
+        </div>
+      <section className="flex justify-center items-center flex-col gap-4 ">
         <h2 className="text-4xl text-center"> Choose what fits you right</h2>
         <p className="text-muted-foreground text-center">
           Our straightforward pricing plans are tailored to meet your needs. If
           {" you're"} not <br />
           ready to commit you can get started for free.
         </p>
-        <div className="flex items-center justify-center gap-4 flex-wrap mt-6">
+        
+        <div className="flex items-center justify-center gap-4 flex-wrap">
           {pricingCards.map((card) => (
             <Card
               key={card.title}
@@ -79,6 +92,9 @@ export default function Home() {
             </Card>
           ))}
         </div>
+      </section>
+      <section className="flex justify-center items-center my-7">
+<h1 className="text-xl font-semibold">Made By Team <span className="text-primary">CodeX</span>🎉</h1>
       </section>
     </main>
   );
