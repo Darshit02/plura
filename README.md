@@ -1,36 +1,130 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h3 align="center">Plural SaaS Project </h3>
 
-## Getting Started
+## Overview
+Plural is a drag-and-drop website builder designed to empower users to create beautiful and functional websites in minutes, without needing any coding experience. Our mission is to simplify the website development process, allowing users to focus on their core business while we take care of the technical complexities.
 
-First, run the development server:
+## <a name="features">🔋 Features</a>
+
+👉 **Drag-and-Drop Interface**: Create and customize your website effortlessly with an intuitive drag-and-drop builder.
+
+👉 **No Coding Required**: Build professional websites without any programming knowledge.
+
+👉 **Responsive Design**: All websites are mobile-friendly and look great on any device.
+
+👉 **Rich Component Library**: Utilize a wide range of pre-built components to enhance your website's functionality and appearance.
+👉 **Integrated User Authentication**: Secure and seamless user authentication powered by Clerk.
+
+👉 **Payment Processing**: Easy integration with Stripe for handling payments.
+
+👉 **Customizable Themes**: Tailor the look and feel of your website with our customizable themes.
+
+## <a name="tech-stack">⚙️ Tech Stack</a>
+
+Plural is built using the following technologies:
+- **Frontend**: 
+  - Next.js
+  - React
+  - Tailwind CSS
+- **Backend**:
+  - Prisma
+  - PostgreSQL (or your preferred database)
+- **Authentication**:
+  - Clerk
+- **Payments**:
+  - Stripe
+- **Miscellaneous**:
+  - Radix UI
+  - React Hook Form
+  - Zod
+  - Framer Motion
+ 
+## <a name="quick-start">🤸 Quick Start</a>
+
+Follow these steps to set up the project locally on your machine.
+
+**Prerequisites**
+
+Make sure you have the following installed on your machine:
+
+- [Git](https://git-scm.com/)
+- [Node.js](https://nodejs.org/en)
+- [npm](https://www.npmjs.com/) (Node Package Manager)
+
+**Cloning the Repository**
+
+```bash
+https://github.com/Darshit02/plura
+cd plura
+```
+
+**Installation**
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
+or
+
+```bash
+npm install
+```
+
+## Environment Variables
+
+**The following environment variables are required to run the project:**
+```
+env
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+CLERK_SECRET_KEY=
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=
+NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=
+DB_USERNAME=
+DB_PASSWORD=
+
+NEXT_PUBLIC_URL=
+NEXT_PUBLIC_DOMAIN=
+NEXT_PUBLIC_SCHEME=
+
+UPLOADTHING_SECRET=
+UPLOADTHING_APP_ID=
+
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=
+STRIPE_SECRET_KEY=
+STRIPE_WEBHOOK_SECRET=
+NEXT_PUBLIC_STRIPE_CLIENT_ID=
+NEXT_PUBLIC_PLATFORM_SUBSCRIPTION_PERCENT=1
+NEXT_PUBLIC_PLATFORM_ONETIME_FEE=2
+NEXT_PUBLIC_PLATFORM_AGENCY_PERCENT=1
+NEXT_PLURA_PRODUCT_ID=
+DATABASE_PASSWORD=
+```
+
+**This was inserted by prisma init:**
+
+```
+DATABASE_URL=
+PROD_DATABASE_URL=
+LOCAL_DATABASE_URL=
+NEXT_PUBLIC_BUILDER_API_KEY=
+```
+
+
+Replace the placeholder values with your actual respective account credentials. 
+
+**Running the Project**
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+```
+or
+
+```bash
+bun run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
