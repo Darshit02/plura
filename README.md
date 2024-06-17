@@ -1,7 +1,7 @@
-<h3 align="center">Plural SaaS Project </h3>
+<h3 align="center">Plura SaaS Project </h3>
 
 ## Overview
-Plural is a drag-and-drop website builder designed to empower users to create beautiful and functional websites in minutes, without needing any coding experience. Our mission is to simplify the website development process, allowing users to focus on their core business while we take care of the technical complexities.
+Plura is a drag-and-drop website builder designed to empower users to create beautiful and functional websites in minutes, without needing any coding experience. Our mission is to simplify the website development process, allowing users to focus on their core business while we take care of the technical complexities.
 
 ## <a name="features">🔋 Features</a>
 
@@ -12,6 +12,7 @@ Plural is a drag-and-drop website builder designed to empower users to create be
 👉 **Responsive Design**: All websites are mobile-friendly and look great on any device.
 
 👉 **Rich Component Library**: Utilize a wide range of pre-built components to enhance your website's functionality and appearance.
+
 👉 **Integrated User Authentication**: Secure and seamless user authentication powered by Clerk.
 
 👉 **Payment Processing**: Easy integration with Stripe for handling payments.
@@ -27,7 +28,7 @@ Plural is built using the following technologies:
   - Tailwind CSS
 - **Backend**:
   - Prisma
-  - PostgreSQL (or your preferred database)
+  - MySQL (or your preferred database)
 - **Authentication**:
   - Clerk
 - **Payments**:
@@ -74,7 +75,7 @@ npm install
 
 **The following environment variables are required to run the project:**
 ```
-env
+.env
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
 CLERK_SECRET_KEY=
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=
